@@ -127,10 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Decorator.cpp" />
+    <ClCompile Include="DekoratorModelWithMoreCharge.cpp" />
     <ClCompile Include="PortativeToster.cpp" />
     <ClCompile Include="Potsolnuh.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Decorator.hpp" />
+    <ClInclude Include="DekoratorModelWithMoreCharge.hpp" />
     <ClInclude Include="PortativeToster.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

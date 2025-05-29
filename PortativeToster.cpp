@@ -2,10 +2,14 @@
 
 void PortativeToster::Charging()
 {
-	if (charge_ < 100)
+	if (charge_ < max_charge_)
 	{
 		std::cout << "Зарядка...\n";
-		charge_ = 100;
+		charge_ = max_charge_;
+	}
+	else
+	{
+		std::cout << "Тостер уже заря\n";
 	}
 }
 

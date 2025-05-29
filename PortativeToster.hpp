@@ -3,15 +3,22 @@
 #include <iostream>
 class PortativeToster
 {
+	//наш основной класс
 public:
+	PortativeToster()
+	{
+		charge_ = 100;
+		max_charge_ = 100;
+	}
 	int GetCharge()const
 	{
 		return charge_;
 	}
-	void Charging();
-	void Tosting();
-private:
-	int charge_ = 100;
+	virtual void Charging();
+	virtual void Tosting();
+protected:
+	int charge_;
+	int max_charge_;
 };
 
 

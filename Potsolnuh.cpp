@@ -1,4 +1,5 @@
 ﻿#include "PortativeToster.hpp"
+#include "DekoratorModelWithMoreCharge.hpp"
 #include <iostream>
 #include <Windows.h>
 int main()
@@ -12,5 +13,13 @@ int main()
     toster.Charging();
     std::cout << "Уровень заряда:" << toster.GetCharge() << "%\n";
 
+    //демонстрация функционала нашей улучшенной модели
+    PortativeToster toster2;
+    DekoratorModelWithMoreCharge dekor(&toster2);
+    std::cout << "Уровень заряда:" << dekor.GetCharge() << "%\n";
+    dekor.Tosting();
+    std::cout << "Уровень заряда:" << dekor.GetCharge() << "%\n";
+    dekor.Charging();
+    std::cout << "Уровень заряда:" << dekor.GetCharge() << "%\n";
 }
 
