@@ -8,16 +8,20 @@ public:
 	//создаём условную продвинутую модель тостера с увеличенным обЪёмом батареи
 	DekoratorModelWithMoreCharge(PortativeToster* portativeToster) : Decorator(portativeToster)
 	{
-		max_charge_ = max_charge_ + 10;
+		max_charge_ = max_charge_ + 10; //ну что-то вроде того
 		charge_ = max_charge_;
 	}
 	void Charging() override
 	{
-		Decorator::Charging();
+		PortativeToster::Charging();
 	}
 	void Tosting() override
 	{
-		Decorator::Tosting();
+		PortativeToster::Tosting();
+	}
+	int GetCharge()const override
+	{
+		return PortativeToster::GetCharge();
 	}
 
 protected:

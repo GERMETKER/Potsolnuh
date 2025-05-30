@@ -10,7 +10,7 @@ public:
 		charge_ = 100;
 		max_charge_ = 100;
 	}
-	int GetCharge()const
+	virtual int GetCharge()const
 	{
 		return charge_;
 	}

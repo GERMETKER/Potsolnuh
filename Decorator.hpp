@@ -5,18 +5,22 @@ class Decorator : public PortativeToster
 {
 public:
 	//создаём декоратр с виртуальными методами для добавления в дальнейшем модификаций
-	Decorator(PortativeToster* portativeToster) : portativeToster_() { }
+	Decorator(PortativeToster* portativeToster) : portativeToster_(portativeToster)  { }
+	int GetCharge()const override
+	{
+		return this->portativeToster_->GetCharge();
+	}
 	void Charging() override
 	{
-		portativeToster_.Charging();
+		portativeToster_->Charging();
 	}
 	void Tosting() override
 	{
-		portativeToster_.Tosting();
+		portativeToster_->Tosting();
 	}
 
 protected:
-	PortativeToster portativeToster_;
+	PortativeToster* portativeToster_;
 	
 };
 
